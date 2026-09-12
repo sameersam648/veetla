@@ -1,0 +1,383 @@
+/* ==========================================================================
+   Veetla Artisan Foods — Wix Studio Design System & Global Theme
+   Source of Truth: Original React 19 / Tailwind v4 Theme Architecture
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Google Fonts CDN Imports: Playfair Display & Poppins
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* --------------------------------------------------------------------------
+   Design Tokens & CSS Variables (Exact Values from Source of Truth)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Core Brand Colors */
+  --color-ivory: #F8F4EC;         /* Primary page background & light text */
+  --color-ivory-dark: #EDE6D6;    /* Secondary background, alternating strips */
+  --color-forest: #264A35;        /* Primary brand green, buttons, accents */
+  --color-forest-dark: #1B3627;   /* Deep forest green, footer background */
+  --color-olive: #536841;         /* Accent green, kicker tags, badges */
+  --color-brown: #3B2919;         /* Primary typography, warm dark terracotta */
+  --color-brown-light: #6B5545;   /* Secondary typography, subtitles, muted icons */
+  --color-gold: #A67C3D;          /* Accent gold, star ratings, highlight borders */
+  --color-border: #D4C4A8;        /* Subtle warm card & input border tone */
+  --color-card: #FFFFFF;          /* Card surface background */
+
+  /* Regional Theme Gradients */
+  --gradient-kerala-hero: linear-gradient(135deg, #1A3A2A 0%, #234131 50%, #2D4A38 100%);
+  --gradient-andhra-hero: linear-gradient(135deg, #4A2C1A 0%, #5D3A24 50%, #6B4530 100%);
+  --gradient-hero-overlay: linear-gradient(90deg, rgba(59,41,25,0.92) 0%, rgba(59,41,25,0.65) 50%, transparent 100%);
+  --gradient-gold-line: linear-gradient(90deg, #264A35 0%, #A67C3D 50%, #264A35 100%);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(59, 41, 25, 0.04);
+  --shadow-md: 0 4px 16px rgba(59, 41, 25, 0.08);
+  --shadow-lg: 0 8px 32px rgba(59, 41, 25, 0.10);
+  --shadow-nav: 0 2px 20px rgba(59, 41, 25, 0.10);
+  --shadow-drawer: -8px 0 40px rgba(59, 41, 25, 0.15);
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+/* --------------------------------------------------------------------------
+   Global Resets & Base Styles
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-brown);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Hierarchy
+   -------------------------------------------------------------------------- */
+.veetla-h1, .veetla-hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-brown);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.veetla-h2, .veetla-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-brown);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.veetla-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-brown);
+  line-height: 1.25;
+}
+
+.veetla-subheading {
+  font-family: var(--font-body);
+  color: var(--color-brown-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.veetla-kicker {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.veetla-script-tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Button Styles & Micro-Interactions
+   -------------------------------------------------------------------------- */
+.veetla-btn-primary {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(38, 74, 53, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.veetla-btn-primary:hover {
+  background-color: var(--color-forest-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(38, 74, 53, 0.28);
+}
+
+.veetla-btn-primary:active {
+  transform: scale(0.97);
+}
+
+.veetla-btn-secondary {
+  background-color: transparent;
+  color: var(--color-forest);
+  border: 2px solid var(--color-forest);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.veetla-btn-secondary:hover {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  transform: translateY(-1px);
+}
+
+.veetla-btn-hero-secondary {
+  background-color: transparent;
+  color: var(--color-ivory);
+  border: 2px solid rgba(248, 244, 236, 0.5);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-height: 44px;
+}
+
+.veetla-btn-hero-secondary:hover {
+  background-color: rgba(248, 244, 236, 0.15);
+  border-color: var(--color-ivory);
+  transform: translateY(-1px);
+}
+
+.veetla-btn-gold {
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(166, 124, 61, 0.25);
+}
+
+.veetla-btn-gold:hover {
+  background-color: #8C6731;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(166, 124, 61, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Cards, Badges & Surfaces
+   -------------------------------------------------------------------------- */
+.veetla-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.veetla-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(166, 124, 61, 0.5);
+}
+
+.veetla-trust-card {
+  background: var(--color-card);
+  border: 1px solid rgba(212, 196, 168, 0.5);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.veetla-trust-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold);
+}
+
+.veetla-glass-card {
+  background: rgba(248, 244, 236, 0.04);
+  border: 1px solid rgba(248, 244, 236, 0.12);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.veetla-glass-card:hover {
+  background: rgba(248, 244, 236, 0.08);
+  border-color: rgba(248, 244, 236, 0.22);
+}
+
+/* Pill Tags & Badges */
+.veetla-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.veetla-pill-hero {
+  background: rgba(248, 244, 236, 0.15);
+  border: 1px solid rgba(248, 244, 236, 0.25);
+  backdrop-filter: blur(4px);
+  color: var(--color-ivory);
+}
+
+.veetla-badge-gold {
+  background: rgba(166, 124, 61, 0.12);
+  color: var(--color-gold);
+  border: 1px solid rgba(166, 124, 61, 0.3);
+}
+
+.veetla-badge-forest {
+  background: rgba(38, 74, 53, 0.10);
+  color: var(--color-forest);
+  border: 1px solid rgba(38, 74, 53, 0.25);
+}
+
+.veetla-badge-olive {
+  background: rgba(83, 104, 65, 0.12);
+  color: var(--color-olive);
+  border: 1px solid rgba(83, 104, 65, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Decorative Motifs & Cultural Visual Elements
+   -------------------------------------------------------------------------- */
+.veetla-line-art-divider {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='20' viewBox='0 0 60 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q15 0 30 10 Q45 20 60 10' stroke='%23D4C4A8' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 60px 20px;
+  height: 20px;
+  width: 100%;
+  opacity: 0.85;
+}
+
+.veetla-bottom-accent-bar {
+  height: 4px;
+  background: var(--gradient-gold-line);
+  opacity: 0.75;
+  width: 100%;
+}
+
+.veetla-corner-accent {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-top: 2px solid rgba(166, 124, 61, 0.5);
+  border-left: 2px solid rgba(166, 124, 61, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Free Shipping Progress Meter
+   -------------------------------------------------------------------------- */
+.veetla-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(212, 196, 168, 0.4);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.veetla-progress-fill {
+  height: 100%;
+  background: var(--color-forest);
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Micro-Animations
+   -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pop-in {
+  animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

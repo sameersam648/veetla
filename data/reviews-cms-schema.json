@@ -1,0 +1,25 @@
+{
+  "collection": {
+    "id": "Reviews",
+    "displayName": "Customer Reviews",
+    "description": "Customer product reviews and ratings for Veetla items",
+    "permissions": {
+      "read": "ANYONE",
+      "create": "SITE_MEMBER",
+      "update": "ADMIN",
+      "delete": "ADMIN"
+    },
+    "fields": [
+      { "key": "productId", "displayName": "Product ID", "type": "text", "description": "Foreign key reference to Wix Stores Product ID" },
+      { "key": "reviewerName", "displayName": "Reviewer Name", "type": "text" },
+      { "key": "location", "displayName": "Location", "type": "text" },
+      { "key": "rating", "displayName": "Star Rating (1-5)", "type": "number" },
+      { "key": "title", "displayName": "Review Title", "type": "text" },
+      { "key": "reviewText", "displayName": "Review Text", "type": "richText" },
+      { "key": "verifiedPurchase", "displayName": "Verified Purchase", "type": "boolean" },
+      { "key": "helpfulCount", "displayName": "Helpful Upvotes", "type": "number" },
+      { "key": "reviewDate", "displayName": "Review Date", "type": "dateTime" },
+      { "key": "status", "displayName": "Moderation Status", "type": "text", "options": ["APPROVED", "PENDING", "REJECTED"] }
+    ]
+  }
+}

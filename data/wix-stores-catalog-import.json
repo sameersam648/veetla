@@ -1,0 +1,387 @@
+{
+  "catalog": {
+    "currency": "INR",
+    "categories": [
+      { "id": "cat-kerala", "name": "Kerala Series", "description": "Crispy snacks made with pure coconut oil and authentic Kerala recipes" },
+      { "id": "cat-andhra", "name": "Andhra Series", "description": "Fiery and bold snacks crafted with traditional Andhra spices and recipes" },
+      { "id": "cat-chips", "name": "Chips", "description": "Hand-cut crispy banana and root chips" },
+      { "id": "cat-murukku", "name": "Murukku", "description": "Hand-pressed crispy savoury spirals" },
+      { "id": "cat-mixture", "name": "Mixture", "description": "Crunchy medleys of lentils, peanuts, and spices" },
+      { "id": "cat-sweets", "name": "Sweets", "description": "Festive South Indian delicacies and jaggery snacks" },
+      { "id": "cat-savoury", "name": "Savoury", "description": "Traditional crispy tea-time savouries" }
+    ],
+    "products": [
+      {
+        "id": "prod-1",
+        "name": "Kerala Banana Chips",
+        "sku": "VTL-KRL-BC-200",
+        "productType": "physical",
+        "description": "Crispy, golden banana chips made with farm-fresh nendran bananas and pure coconut oil. No palm oil or refined oils, no preservatives. Traditional recipe from Thrissur, Kerala.",
+        "price": 249,
+        "costPrice": 120,
+        "ribbon": "Best Seller",
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 250 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": {
+          "mainMedia": "/images/product-1.jpg",
+          "gallery": ["/images/product-1.jpg", "/images/product-detail-1.jpg", "/images/product-2.jpg", "/images/product-3.jpg"]
+        },
+        "options": [
+          {
+            "name": "Pack Size",
+            "choices": [
+              { "value": "100g", "priceModifier": -100 },
+              { "value": "200g", "priceModifier": 0 },
+              { "value": "400g", "priceModifier": 200 },
+              { "value": "1kg", "priceModifier": 750 }
+            ]
+          }
+        ],
+        "customFields": {
+          "ingredients": "Nendran Bananas (Raw), Pure Coconut Oil, Rock Salt, Turmeric",
+          "allergens": "May contain traces of nuts processed in same facility",
+          "origin": "Thrissur, Kerala",
+          "shelfLife": "90 days from manufacturing"
+        }
+      },
+      {
+        "id": "prod-2",
+        "name": "Tapioca Chips",
+        "sku": "VTL-KRL-TC-180",
+        "productType": "physical",
+        "description": "Thin, crunchy tapioca chips seasoned with a hint of salt and traditional spices, fried in pure coconut oil.",
+        "price": 199,
+        "costPrice": 95,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 180 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": {
+          "mainMedia": "/images/product-2.jpg",
+          "gallery": ["/images/product-2.jpg", "/images/product-1.jpg", "/images/product-3.jpg"]
+        },
+        "options": [
+          {
+            "name": "Pack Size",
+            "choices": [
+              { "value": "100g", "priceModifier": -70 },
+              { "value": "180g", "priceModifier": 0 },
+              { "value": "350g", "priceModifier": 170 }
+            ]
+          }
+        ],
+        "customFields": {
+          "ingredients": "Fresh Tapioca (Cassava), Pure Coconut Oil, Rock Salt, Black Pepper",
+          "origin": "Kottayam, Kerala",
+          "shelfLife": "90 days from manufacturing"
+        }
+      },
+      {
+        "id": "prod-3",
+        "name": "Kerala Murukku",
+        "sku": "VTL-KRL-MK-200",
+        "productType": "physical",
+        "description": "Spiral-shaped crispy murukku made with rice flour, cumin, and sesame. Hand-pressed using traditional brass moulds.",
+        "price": 179,
+        "costPrice": 80,
+        "ribbon": "Top Rated",
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 210 },
+        "categories": ["Kerala Series", "Murukku"],
+        "media": {
+          "mainMedia": "/images/product-3.jpg",
+          "gallery": ["/images/product-3.jpg", "/images/product-1.jpg", "/images/product-4.jpg"]
+        },
+        "options": [
+          {
+            "name": "Pack Size",
+            "choices": [
+              { "value": "150g", "priceModifier": -30 },
+              { "value": "200g", "priceModifier": 0 },
+              { "value": "400g", "priceModifier": 150 }
+            ]
+          }
+        ],
+        "customFields": {
+          "ingredients": "Rice Flour, Urad Dal Flour, Pure Coconut Oil, Cumin Seeds, Sesame Seeds, Black Pepper, Rock Salt, Asafoetida",
+          "origin": "Palakkad, Kerala",
+          "shelfLife": "60 days from manufacturing"
+        }
+      },
+      {
+        "id": "prod-4",
+        "name": "Andhra Mixture",
+        "sku": "VTL-AND-MX-250",
+        "productType": "physical",
+        "description": "A fiery medley of lentils, peanuts, curry leaves, and dried chillies with authentic Andhra flavour.",
+        "price": 229,
+        "costPrice": 110,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 190 },
+        "categories": ["Andhra Series", "Mixture"],
+        "media": {
+          "mainMedia": "/images/product-4.jpg",
+          "gallery": ["/images/product-4.jpg", "/images/product-1.jpg", "/images/product-2.jpg"]
+        },
+        "options": [
+          {
+            "name": "Pack Size",
+            "choices": [
+              { "value": "150g", "priceModifier": -60 },
+              { "value": "250g", "priceModifier": 0 },
+              { "value": "500g", "priceModifier": 190 }
+            ]
+          }
+        ],
+        "customFields": {
+          "ingredients": "Gram Flour (Besan), Rice Flakes, Roasted Peanuts, Curry Leaves, Dried Red Chillies, Mustard Seeds, Groundnut Oil, Rock Salt",
+          "origin": "Vijayawada, Andhra Pradesh",
+          "shelfLife": "90 days from manufacturing"
+        }
+      },
+      {
+        "id": "prod-5",
+        "name": "Jaggery Banana Chips",
+        "sku": "VTL-KRL-JBC-200",
+        "productType": "physical",
+        "description": "Sweet banana chips coated with organic jaggery, a traditional Kerala delicacy.",
+        "price": 279,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 120 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": { "mainMedia": "/images/product-1.jpg" }
+      },
+      {
+        "id": "prod-6",
+        "name": "Pepper Tapioca Chips",
+        "sku": "VTL-KRL-PTC-180",
+        "productType": "physical",
+        "description": "Crunchy tapioca chips with freshly ground black pepper and sea salt.",
+        "price": 219,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 140 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": { "mainMedia": "/images/product-2.jpg" }
+      },
+      {
+        "id": "prod-7",
+        "name": "Ribbon Pakoda",
+        "sku": "VTL-AND-RP-200",
+        "productType": "physical",
+        "description": "Crispy ribbon-shaped snack made with gram flour and traditional spices.",
+        "price": 189,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 160 },
+        "categories": ["Andhra Series", "Pakoda"],
+        "media": { "mainMedia": "/images/product-3.jpg" }
+      },
+      {
+        "id": "prod-8",
+        "name": "Andhra Murukku",
+        "sku": "VTL-AND-MK-200",
+        "productType": "physical",
+        "description": "Spicy spiral murukku with Andhra red chili and curry leaf seasoning.",
+        "price": 199,
+        "ribbon": "Popular",
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 175 },
+        "categories": ["Andhra Series", "Murukku"],
+        "media": { "mainMedia": "/images/product-4.jpg" }
+      },
+      {
+        "id": "prod-9",
+        "name": "Coconut Chips",
+        "sku": "VTL-KRL-CC-150",
+        "productType": "physical",
+        "description": "Thinly sliced coconut chips toasted to perfection with a touch of salt.",
+        "price": 299,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 90 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": { "mainMedia": "/images/product-1.jpg" }
+      },
+      {
+        "id": "prod-10",
+        "name": "Kara Sev",
+        "sku": "VTL-AND-KS-200",
+        "productType": "physical",
+        "description": "Fine, crispy noodle-like snack seasoned with chili and asafoetida.",
+        "price": 169,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 130 },
+        "categories": ["Andhra Series", "Sev"],
+        "media": { "mainMedia": "/images/product-2.jpg" }
+      },
+      {
+        "id": "prod-11",
+        "name": "Plantain Chips Salted",
+        "sku": "VTL-KRL-PC-200",
+        "productType": "physical",
+        "description": "Classic salted plantain chips, thin-cut and fried in pure coconut oil.",
+        "price": 229,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 200 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": { "mainMedia": "/images/product-3.jpg" }
+      },
+      {
+        "id": "prod-12",
+        "name": "Chilli Banana Chips",
+        "sku": "VTL-AND-CBC-200",
+        "productType": "physical",
+        "description": "Banana chips with a spicy red chilli coating for those who love heat.",
+        "price": 259,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 110 },
+        "categories": ["Andhra Series", "Chips"],
+        "media": { "mainMedia": "/images/product-4.jpg" }
+      },
+      {
+        "id": "prod-13",
+        "name": "Achappam",
+        "sku": "VTL-KRL-ACH-150",
+        "productType": "physical",
+        "description": "Delicate rose-shaped cookies made with rice flour and coconut milk, a festive favourite.",
+        "price": 319,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 80 },
+        "categories": ["Kerala Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-1.jpg" }
+      },
+      {
+        "id": "prod-14",
+        "name": "Spicy Omapodi",
+        "sku": "VTL-AND-OMP-200",
+        "productType": "physical",
+        "description": "Thin, crunchy noodle snack infused with ajwain and red chili, a classic Andhra treat.",
+        "price": 159,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 150 },
+        "categories": ["Andhra Series", "Sev"],
+        "media": { "mainMedia": "/images/product-2.jpg" }
+      },
+      {
+        "id": "prod-15",
+        "name": "Unniappam",
+        "sku": "VTL-KRL-UNP-250",
+        "productType": "physical",
+        "description": "Sweet rice fritters with jaggery, banana, and cardamom — temple prasadam classic.",
+        "price": 289,
+        "trackInventory": true,
+        "stock": { "inStock": false, "quantity": 0 },
+        "categories": ["Kerala Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-3.jpg" }
+      },
+      {
+        "id": "prod-16",
+        "name": "Andhra Chekodi",
+        "sku": "VTL-AND-CHK-200",
+        "productType": "physical",
+        "description": "Ring-shaped crispy savoury made with rice and urad dal, seasoned with cumin and sesame.",
+        "price": 209,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 125 },
+        "categories": ["Andhra Series", "Savoury"],
+        "media": { "mainMedia": "/images/product-4.jpg" }
+      },
+      {
+        "id": "prod-17",
+        "name": "Sharkara Varatti",
+        "sku": "VTL-KRL-SKV-250",
+        "productType": "physical",
+        "description": "Crispy banana chips coated in jaggery syrup with a hint of dry ginger and cardamom.",
+        "price": 329,
+        "ribbon": "Festival Special",
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 95 },
+        "categories": ["Kerala Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-1.jpg" }
+      },
+      {
+        "id": "prod-18",
+        "name": "Masala Peanuts",
+        "sku": "VTL-AND-MP-200",
+        "productType": "physical",
+        "description": "Crunchy peanuts coated in a spiced gram flour batter, fried till golden perfection.",
+        "price": 179,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 185 },
+        "categories": ["Andhra Series", "Mixture"],
+        "media": { "mainMedia": "/images/product-2.jpg" }
+      },
+      {
+        "id": "prod-19",
+        "name": "Kerala Nei Appam",
+        "sku": "VTL-KRL-NEI-200",
+        "productType": "physical",
+        "description": "Small, golden pancakes made with rice batter, jaggery, and ghee — soft and aromatic.",
+        "price": 269,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 65 },
+        "categories": ["Kerala Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-3.jpg" }
+      },
+      {
+        "id": "prod-20",
+        "name": "Andhra Garelu",
+        "sku": "VTL-AND-GAR-200",
+        "productType": "physical",
+        "description": "Crispy, doughnut-shaped vada made from urad dal with curry leaves and peppercorns.",
+        "price": 239,
+        "trackInventory": true,
+        "stock": { "inStock": false, "quantity": 0 },
+        "categories": ["Andhra Series", "Savoury"],
+        "media": { "mainMedia": "/images/product-4.jpg" }
+      },
+      {
+        "id": "prod-21",
+        "name": "Ela Ada",
+        "sku": "VTL-KRL-ELA-300",
+        "productType": "physical",
+        "description": "Sweet rice parcels steamed inside banana leaf with coconut and jaggery filling.",
+        "price": 349,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 70 },
+        "categories": ["Kerala Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-1.jpg" }
+      },
+      {
+        "id": "prod-22",
+        "name": "Bellam Gavvalu",
+        "sku": "VTL-AND-BG-200",
+        "productType": "physical",
+        "description": "Shell-shaped sweet pastry made with jaggery and rice flour, a festive Andhra delicacy.",
+        "price": 289,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 90 },
+        "categories": ["Andhra Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-2.jpg" }
+      },
+      {
+        "id": "prod-23",
+        "name": "Jackfruit Chips",
+        "sku": "VTL-KRL-JFC-150",
+        "productType": "physical",
+        "description": "Thinly sliced raw jackfruit fried in coconut oil — crispy, sweet, and savoury.",
+        "price": 279,
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 115 },
+        "categories": ["Kerala Series", "Chips"],
+        "media": { "mainMedia": "/images/product-3.jpg" }
+      },
+      {
+        "id": "prod-24",
+        "name": "Andhra Kakinada Kaja",
+        "sku": "VTL-AND-KK-250",
+        "productType": "physical",
+        "description": "Layered flaky pastry soaked in sugar syrup — the iconic sweet from Kakinada.",
+        "price": 359,
+        "ribbon": "Limited Edition",
+        "trackInventory": true,
+        "stock": { "inStock": true, "quantity": 60 },
+        "categories": ["Andhra Series", "Sweets"],
+        "media": { "mainMedia": "/images/product-4.jpg" }
+      }
+    ]
+  }
+}

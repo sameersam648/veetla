@@ -12,6 +12,32 @@
           "invoke": true
         }
       }
+    },
+    "backend/shipping.web.js": {
+      "calculateShippingOptions": {
+        "siteOwner": {
+          "invoke": true
+        },
+        "siteMember": {
+          "invoke": true
+        },
+        "anonymous": {
+          "invoke": true
+        }
+      }
+    },
+    "backend/cart.web.js": {
+      "calculateVerifiedTotals": {
+        "siteOwner": {
+          "invoke": true
+        },
+        "siteMember": {
+          "invoke": true
+        },
+        "anonymous": {
+          "invoke": true
+        }
+      }
     }
   }
 }
